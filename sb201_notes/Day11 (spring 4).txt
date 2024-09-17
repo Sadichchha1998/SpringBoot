@@ -1,0 +1,48 @@
+Spring core : 
+
+Annotations.
+
+Stereotype annotation:
+
+@Component
+@Service
+@Repository
+@Controller
+
+---component auto-scanning 
+
+Note: If our Spring Bean is in prototype scope then, Spring 
+container will not manage the life-cycle of Spring bean
+after giving the object to the client. i.e destroy method will not be 
+called on Spring Bean obj in prototype scope.
+
+
+@Bean 
+
+--to register a normal java class with container to make a Spring Bean
+
+1. by using <bean> tag
+
+2.by using stereotype annotation
+
+3. by using @Bean tag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

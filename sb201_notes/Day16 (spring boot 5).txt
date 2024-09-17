@@ -1,0 +1,56 @@
+Rest api using Spring Boot 
+GET 
+POST 
+how to handle exceptions  
+ResponseEntity 
+
+Input validation  (Request body)
+Database connectivity using Spring Data JPA (Hibernate)
+
+
+Input validation  (Request body):
+==========================
+
+JSON 
+
+client data-------Controller ------------> SL --------------->DAL ------------->DB  
+
+
+@NotNull  : makes field mandatory
+@NotBlank : validate blank string "    ";
+@NotEmpty  : validate empty string "";
+private String name = "     ";
+
+
+Spring Data JPA:
+=============
+
+roll
+name
+address
+email
+password
+
+Repo 
+
+@Query("select s from Student s where s.email=?1 AND s.password=?2")
+public Student loginStudent(String username, String password);
+
+
+In Controller:
+
+@Post("/loginstudent")
+public ResponseEntity<Student> loginStudent(@RequestBody LoginBean bean){
+
+
+}
+
+
+class LoginBean{
+
+private String username;
+private String password;
+private String role;
+
+}
+
