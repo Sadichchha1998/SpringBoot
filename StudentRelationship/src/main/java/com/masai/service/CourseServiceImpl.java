@@ -8,11 +8,13 @@ import org.springframework.stereotype.Service;
 import com.masai.model.Course;
 import com.masai.model.Student;
 import com.masai.repository.CourseDao;
+import com.masai.repository.StudentDao;
 
 @Service
 public class CourseServiceImpl  implements CourseService{
      @Autowired
 	private CourseDao cDao;
+    
 	@Override
 	public Course registerNewCourse(Course course) {
 		// here taking list of all student and association 
@@ -28,3 +30,4 @@ public class CourseServiceImpl  implements CourseService{
 	}	
 
 }
+

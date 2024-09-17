@@ -1,5 +1,9 @@
 package com.masai.service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,5 +33,17 @@ public class StudentServiceImpl implements StudentService {
 		throw new CourseException("course not found with name "+cname);
 	}
 	}
+	@Override
+	public List<Student> findStudentByCname(String cname) throws CourseException {
+	Set<Student> students=	cDao.getStudentsByCname(cname);
+	System.out.println("++++++++++++++++++"+students);
+	if(students.size()>0) {
+		// here converting list to set
+	List<Student>list = new ArrayList<>(students);
+	return list;
+	}else {
+		throw new CourseException("course does not exits with cname"+cname);
+	}
 
+}
 }
