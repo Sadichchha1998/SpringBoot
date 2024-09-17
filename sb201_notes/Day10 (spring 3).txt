@@ -1,0 +1,117 @@
+Spring Core: 
+
+Spring Bean  (Java  class )
+Spring container
+Spring configuration file
+
+<bean>
+
+creating the object 
+resolving the dependencies 
+<property>  : setter injection
+<constructor-arg>  : constructor injection
+
+bean autowiring: it is applicable only with Object type dependencies 
+
+byName
+byType
+constructor 
+
+class A{
+}
+
+
+A a1= new A();    //constructor
+
+a1=null; // finalize();  ... Object class 
+
+public void finalize(){
+//
+}
+
+
+Note: for normal java class /java bean Jvm will manage the life-cycle through
+constructor and finalize() method.
+
+where as for a Spring Bean life-cycle will be managed by the Spring container.
+
+
+Note: According to the Singleton design pattern for a java class we are allowed to create only one object per jvm.
+
+int x :     value
+
+B b1 :  ref
+
+Collection type depenencies:
+========================
+
+xml : it gives flexibility but not performance.
+
+
+.java ----> .class ---> jar ----> server 
+xml ---> 
+
+
+@annotations 
+package com.masai;
+@Service 
+public class A{
+}
+
+package com.masai.services;
+@Component
+public class B{
+}
+
+package com.abc;
+@Repository
+public class C{
+}
+
+package com.masai.repo;
+public class D{
+}
+
+base-package="com.masai" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

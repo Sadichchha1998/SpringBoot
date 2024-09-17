@@ -1,0 +1,155 @@
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int n = sc.nextInt();
+		
+		int[] arr = new int[n];
+		for(int i=0; i<n; i++) {
+			arr[i] = sc.nextInt();
+		}
+
+
+	}
+
+}
+# Types of Examples
+
+### Type 1 :
+
+```jsx
+**Sample Input**
+4
+1 2 3 4
+
+**Input Format :**
+The first line of input contains an integer N - denoting the size of the array.
+The second line contains the N space-separated integers.
+
+import java.io.*;
+import java.util.*;
+import java.lang.*;
+
+class Main{
+
+  public static void evenOddSum(int arr[], int N){
+    //write your code here
+  }
+
+  public static void main(String[] args){
+    Scanner s = new Scanner(System.in);
+    int num = s.nextInt();
+    int arr[] = new int[num];
+    for(int i = 0; i < num; i++) {
+      arr[i] = s.nextInt();
+    }
+    evenOddSum(arr, num);
+  }
+}
+
+```
+
+### Type 2
+
+```jsx
+**Sample Input**
+5
+MasAi
+
+**Input**
+The first line of the input contains the value stored inN
+The second line of the input contains the value stored instr
+
+//PREPEND BEGIN
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Main{
+
+  public static void removeUppercase(int N, String str){
+    //write your code here
+  }
+
+  public static void main(String[] args){
+    Scanner s = new Scanner(System.in);
+    int n = s.nextInt();
+    String str = s.next();
+    removeUppercase(n,str);
+  }
+}
+
+```
+
+### Type 3
+
+```jsx
+
+4
+
+**Input**
+The first and the only line of the input contains the value stored in num
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Main{
+
+  public static void nestedReversePattern(int N){
+    //write your code here
+  }
+
+  public static void main(String[] args){
+    Scanner s = new Scanner(System.in);
+    int N = s.nextInt();
+    nestedReversePattern(N);
+   }
+}
+```
+
+### Type 4
+
+```jsx
+2
+3 4
+1 2 3 4
+5 6 7 8
+9 10 11 12
+
+**Input**
+The first line of the input contains T, the number of test cases.
+The first line of each test case contains N and M, the number of rows and 
+columns in the given matrix.
+The next N lines contain M values each denoting the elements of the matrix.
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Main{
+
+  public static void spiralTraversal(int N,int M,int[][] arr){
+    //write your code here
+  }
+
+  public static void main(String[] args){
+    Scanner s = new Scanner(System.in);
+    int tc=s.nextInt();
+    for(int p=0;p<tc;p++){
+        int n = s.nextInt();
+        int m = s.nextInt();
+        int[][] arr = new int[n][m];
+        for (int i=0;i<n;i++){
+          for (int j=0;j<m;j++) arr[i][j] = s.nextInt();
+        }
+        spiralTraversal(n,m,arr);
+    }
+  }
+}
+```
+
+### Type 5
