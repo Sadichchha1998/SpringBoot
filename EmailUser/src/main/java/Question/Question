@@ -1,0 +1,39 @@
+## Problem 2:
+
+**Create a relationship between Email - User account**
+
+one email address is associated with exactly one user account and each user account is identified by its email address.
+
+- You need to create two classes User and Email.
+- Form a one to one relationship between two tables.
+
+User
+id 
+name
+phoneNo
+dateOfBirth
+Email email
+
+Email
+mail_id
+email
+created_date
+User user
+
+Implement the following with the given routes :
+
+User-Email (2)
+
+1. Retrieve All Users
+2. Create a User
+3. Retrieve One User
+4. Delete a User
+7. Retrieve Detail of email for a user
+6. Create a email for a user
+Route
+GET [users
+POST /users
+GET /users/{id)
+DELETE /users/{id)
+GET /users/{id)/mail/{mail...
+POST /user/{id}/mail
