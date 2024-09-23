@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.masai.exception.EmployeeException;
+import com.masai.model.Address;
 import com.masai.model.Employee;
 import com.masai.model.EmployeeDTO;
 import com.masai.repository.EmployeeRepo;
@@ -45,19 +46,34 @@ public class EmployeeServiceImpl  implements EmployeeService{
 
 	@Override
 	public Employee loginEmployee(String email, String password) throws EmployeeException {
-		// TODO Auto-generated method stub
-		return null;
+	     Employee getEmp=    empRepo.findByEmail(email);
+	     if(getEmp.equals(getEmp)) {
+	    	 getEmp.getEmail();
+	    	 getEmp.getPassword();
+	    	 return getEmp;
+	     } else {
+	    	 throw new EmployeeException("Employee not found...");
+	     }
 	}
 
-	@Override
-	public List<Employee> getEmployeeDetailsByAddress(String address) throws EmployeeException {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	@Override
+//	public List<Employee> getEmployeeDetailsByAddress(Address address) throws EmployeeException {
+//		
+//		   List<Employee> employees = empRepo.findByAddress(address);
+//
+//		    if (employees.isEmpty()) {
+//		        throw new EmployeeException("No employee found with the given address");
+//		    } else {
+//		        return employees;
+//		    } 	
+//	}
 
 	@Override
-	public Employee updateEmployee(Employee emp) throws EmployeeException {
+	public Employee updateEmployee(Employee emp , Integer empId) throws EmployeeException {
 		// TODO Auto-generated method stub
+		Employee empl= empRepo.findById(empId).orElseThrow(()-> new EmployeeException("Employee not found"));
+		empl.getEmpName(empl.setEmpName(empName));
+		
 		return null;
 	}
 
